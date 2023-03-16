@@ -29,3 +29,15 @@ def test_daily_mean_integers():
     # Need to use Numpy testing functions to compare arrays
     npt.assert_array_equal(daily_mean(test_input), test_result)
 
+def test_daily_std():
+    """Test that std function works correctly."""
+    from inflammation.models import daily_std
+
+    test_input = np.array([[1, 1],
+                          [2, 2],
+                          [3, 3]])
+    test_result = np.array([0.81650, 0.81650])
+
+    # Numpy testing function to compare arrays
+    npt.assert_allclose(daily_std(test_input), test_result, atol=0.001)
+
