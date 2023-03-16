@@ -23,20 +23,21 @@ def main(args):
         view_data = {
             'average': models.daily_mean(inflammation_data),
             'max': models.daily_max(inflammation_data),
-            'min': models.daily_min(inflammation_data)
+            'min': models.daily_min(inflammation_data),
+            'std': models.daily_std(inflammation_data)
         }
 
         views.visualize(view_data)
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description='A basic patient inflammation data management system')
+    if __name__ == "__main__":
+        parser = argparse.ArgumentParser(
+            description='A basic patient inflammation data management system')
 
-    parser.add_argument(
-        'infiles',
-        nargs='+',
-        help='Input CSV(s) containing inflammation series for each patient')
+        parser.add_argument(
+            'infiles',
+            nargs='+',
+            help='Input CSV(s) containing inflammation series for each patient')
 
-    args = parser.parse_args()
+        args = parser.parse_args()
 
-    main(args)
+        main(args)

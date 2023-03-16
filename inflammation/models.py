@@ -69,3 +69,4 @@ def daily_std(data):
     '''
 
     return np.std(data, axis=0)
+
