@@ -45,3 +45,27 @@ def daily_min(data):
     :returns: An array of min values of measurements for each day.
     """
     return np.min(data, axis=0)
+
+
+def daily_above_threshold(data, patient_number, threshold):
+
+    """ Determine if a value is above a threshold
+
+    :param threshold: A number for the threshold
+    :param data: An array of data
+    :param patient_number: a list of patient numbers
+    :returns: A boolean output if data is above threshold
+    """
+
+    return map(lambda x: x > threshold, data[patient_number,:])
+
+
+def daily_std(data):
+
+    '''compute standard deviation of data
+
+    :param data: an array of data
+    :returns standard deviation of each day
+    '''
+
+    return np.std(data, axis=0)
