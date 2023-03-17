@@ -62,7 +62,7 @@ def daily_above_threshold(data, patient_number, threshold):
 
 def daily_std(data):
 
-    '''compute standard deviation of data
+    '''compute standard deviation of 2D data arrays along the rows
 
     :param data: an array of data
     :returns standard deviation of each day
