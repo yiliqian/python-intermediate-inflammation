@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "inflammation"
+version = "1.0.0"
+description = "analyze patient inflammation data"
+authors = ["Yili Qian <ben.yiliqian@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+matplotlib = "^3.7.1"
+numpy = "^1.24.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.17.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
